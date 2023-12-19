@@ -1,0 +1,88 @@
+sql statements end with ;
+
+psql check -> done 
+
+datatypes - 
+int -
+int integer
+bigint
+smallint
+float
+double
+char varchar text
+date time 
+boolean
+
+
+CREATE TABLE cars(
+    brand VARCHAR(255),
+    model VARCHAR(255),
+    year INT
+);
+
+insert a row of datat
+INSERT INTO cars (brand, model, year);
+VALUES ('Ford', 'Mustang', 1964);
+
+display everything - SELECT * from tablename eg cars
+
+
+multiple values insertion 
+INSERT INTO cars (brand, model, year)
+VALUES
+  ('Volvo', 'p1800', 1968),
+  ('BMW', 'M1', 1978),
+  ('Toyota', 'Celica', 1975);
+
+
+for retrieving data use SELECT
+column - Select brand,year from cars;
+entire columns- select * from table;
+
+to get the row datat- > select <column><condition> from <table> where <condition>
+
+add a column to the table -> alter table- > add,delete and modify the columns ->
+alter table cars 
+add color varchar(225);
+
+updating the records -> update
+update cars
+set color = 'red'
+where brand = 'volovo';   // important to specify 
+
+alter table - can be used to alter the table 
+alter column can be user to alter respective columns
+
+drop -> for rmoivng 
+
+alter table cars
+drop column color;
+
+delete existing records - >
+use delete keyword
+delete from cars
+where brand ='Volvo'
+
+
+dropping the entire table -> delete the entire table
+
+where operators -> = < > etc
+
+sorting data - order by
+
+joins -
+a join is a clause used to combine rows from two or more tables, based on the relation between them.
+
+example ->
+
+select id, name, amount from products
+inner join products2 on products.od = products2.id;
+
+types of joins ->
+
+inner - returns the records that have matching values in both the tables
+left - returns all records from left table
+right - returns all records from right table
+full - return all records in either if there is match
+
+there are many keywords and operators like these read and take reference from docs.

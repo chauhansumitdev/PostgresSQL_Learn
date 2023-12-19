@@ -1,0 +1,11 @@
+* ACID principle- transaction princliples
+set of properties that gurantee the reliability of transactions in the database system.
+atomicity
+consistency
+isolation
+durability
+Atomicity - A transaction is to be treated as the single unit ie fundamental unit of work. It is indivisible. Either all the changes made by the transaction is committed to the database of none of it. If any part of the transaction fails the entire transaction is rolled back and the databse is uneffected and unchanged. No partial changes are allowed.
+Consistency - This ensures that the transaction changes the database from one stable state to another no intermediate or partial changes are allowed if so the database is rolled back to the previous stable state.
+Isolation - This ensures that the current execution of multiple transactions do not result in conflict  or interferce between them.
+Durability - This ensures that the changes made by the transaction is persistent that is permanent and would stay the same in case of any physical failure ie permanently stored.
+
