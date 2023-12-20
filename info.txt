@@ -9,3 +9,83 @@ Consistency - This ensures that the transaction changes the database from one st
 Isolation - This ensures that the current execution of multiple transactions do not result in conflict  or interferce between them.
 Durability - This ensures that the changes made by the transaction is persistent that is permanent and would stay the same in case of any physical failure ie permanently stored.
 
+primary key - unique identifier for a record in the table - unique and never null
+
+foreign key - column or set of coulums in a table that refer to the primary key of the another table
+
+api design - rest and graphql
+rest 
+graphql
+1 multiple endpoints
+ single endpoint
+
+ 2 server decides the response structure
+  client decides the response structure
+
+  3 over/under fetching due to fixed structure
+    minimised accordint to the requirements
+
+4 muliple requests for differnet resources
+  single request with nested queries
+
+
+
+sql - structures query language 
+domain specific langugae for relational databases for querying
+sql components
+dql - data query language - querying the db
+ddl - data defiining language - defining the structure of the db
+dml - data manipulating language - used for data storage and  manipulation
+dcl - controlling the access to the data in the db
+
+
+
+sql/nosql
+sql - relational db, predefined schema, verticle scaling,
+nosql - document db - storing the data in various formats like key: val pair ' schema less, horizontal scaling, 
+
+
+database-
+efficient data storage, manage, retrival, securityc, scalability
+
+dbms - interface for managing the db
+
+
+Normalization - the process of dividing the large table into smaller tables and definig the relationsips between them . reduces redudency(repetitiveness - copy) .there can be row level duplicacy and column level duplicacy. a normalized table is protected from insertion anomalies, deletion anomalies and deletion anomalies .this is achieved through normal forms-
+1nf - first normal form - column contain atomic values - use of primary key
+ using row order to comvey info is not permitted
+mixing datatypes within the same column is not permitted
+having a table without primary key is not permitted
+repeating groups are not permitted
+
+2nf - insertion deletion and updation anomaly
+each non key(columns other than the primary key) must depend on the entire primary key
+no partial dependency on the primary key is allowed
+
+3nf - every non key attribute in a table should depend on the key the whole key and nothing but the key.
+
+benefits of normailzation - minimizing the data duplicacy,update anomalies, facilitate querying.
+
+Denormalization - the process of intentionally introducing the redudency into the db by combining the tables useful for read heavy applications
+
+
+Write a SQL query to retrieve all columns from a table named "employees."
+ select * from employees;
+
+
+SELECT  - used to retrive data from the db table
+
+
+
+| Aspect                              | WHERE Clause                                       | HAVING Clause                                        |
+|-------------------------------------|----------------------------------------------------|------------------------------------------------------|
+| **Used with Statements**             | SELECT, UPDATE, DELETE                              | SELECT (with GROUP BY)                                |
+| **Filters Rows**                     | Before grouping and aggregation                     | After grouping and aggregation                       |
+| **Works with Individual Rows**       | Yes                                                | No                                                   |
+| **Works with Aggregated Values**     | No                                                 | Yes                                                  |
+| **Example 1**                        | `SELECT column1 FROM table_name WHERE condition;` | N/A (Used for filtering before grouping)             |
+| **Example 2**                        | `SELECT department, AVG(salary) FROM employees WHERE salary > 50000 GROUP BY department;` | `SELECT department, AVG(salary) FROM employees GROUP BY department HAVING AVG(salary) > 50000;` |
+| **Use Case**                         | Filtering individual rows based on conditions      | Filtering grouped results based on aggregated values |
+
+
+
