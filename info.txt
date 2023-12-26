@@ -89,3 +89,89 @@ SELECT  - used to retrive data from the db table
 
 
 
+schema - structure of the table in a db
+instance - the data in the table of the db at a particular instance of time.
+
+olap - online analytical processing - deals with the historical records
+oltp -online transaction processing - deals with tht current data
+
+er diagram - entity - 
+entity (row)- anything that has the differentiating preperty.
+entity set
+
+attributes - (columns) - defining and describing the properties of the entities.
+
+
+generalisation/specialisation
+
+
+rdbms
+cardinality - no of rows in a table
+
+problems in the rdbms- update anomalies
+insertion anomalies
+modification anomalies
+deletion anomalies
+ 
+
+redudency -> anomalies -> need to fix -> Normalization
+
+
+functional dependency
+like things that are true and are automatically undrstood.
+
+attribute closure/set - >
+set of attributes which can be functionally determined from F - denooted by F*
+
+Armstrong axioms -
+RAT
+reflexivity - AB - B
+augmentation - AB= CB
+tranitivity - Y -Z then X - Z
+
+key
+
+Super key - Set of attributes using which we can identify eah tuple uniquely is called Super key
+eg R(abcd)
+then ab -> cd here as is the super key
+closure of super key -> R(table)
+
+Candidate key -
+minimal set of attributes using which we can identify each tuple uniquely is called candidate key .
+
+Primary key-
+one of the candidates keys is selected by the db admin as a Primary means to indentify tuple is called primary key. cannot have null values and there can be exactly one primary key per table.
+prime attribute - if it is a part of any of the candidate key.
+
+foreign key - is a column or a group of columns in a relational db table that refers the primary key of the same table or some other table to represent relationsips.
+
+Normalization
+1nf -
+atomic values
+unique columns
+primary key
+eliminating duplicated
+
+partial dependency - whne non prime attribut is dependent only on a part of the candidate key then it is called partial dependency.
+r(abcd)
+ab - d
+a - c 
+
+2nf -1nf+ should not contain partial dependency
+
+
+Transisitive dependency -
+r(abc)
+a - B
+b - c 
+in this a is the primary key also the prime attribute and b and c are the non prime attr.
+a functional dependency from non- prime attribute to non prime attribute is called transisive dependency.
+
+3nf - 1nf+2nf+ should not contain the transitive dependency
+a-b then b should be the prime attribute.
+
+BCBF - boyce codd normal form
+a should be super key .
+
+Multivalued dependency-
+Trivial/Non trivial
