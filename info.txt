@@ -175,3 +175,102 @@ a should be super key .
 
 Multivalued dependency-
 Trivial/Non trivial
+rohan - singer
+rohan - dancer
+shown with two arrows ->->
+
+4nf-
+it is in bcnf
+there must not exist any non trivial multivalued dependency
+each mvd is decomposed in separate table where it becomes trivial
+
+summery - normalizaion = decomposition of the table
+now a scenerio can arise = lossy/losless dependency preserving decomposition
+when Denormalization is done the data is lost after joinig the dicomposed table tack to its original form
+
+decomposition should be losless - menditory
+
+the decomposition can be losless only when all of the attributes are covered by the decomposed tables and there is minimum of the one distinct common attribute between them
+then the thing is that the common attribute should be the key(primary/candidate)
+
+5nf
+it can no longer decomposed and so if done there will defenetely lossy decomposition
+
+
+INDEXING
+improves the data retrival but increases space overhead
+
+QUERY language
+procedural query lang -  how users instruct system to performs a sequence of operations on the data base in order to compute the desired result.
+- here the user provides bothe what data is retrieved and how to be retrieved eg relational algebra
+
+
+non realational - the user describes the desired information without giving specific procedure for obtaining that information
+
+
+relatioal algebra
+operand - tables
+
+the output is also a table - the operation can be between two tables or within one table only
+
+fundamental operatirs
+select
+project
+union
+set differnce
+cross product 
+rename
+
+derived
+join
+intersection
+division
+assignment
+
+
+
+op
+projection - column
+selection - row
+
+(works on cartesian products
+)sql
+ddl + dml + dcl(control) + dql (query) + vdl (view)
+data defining - table size. col etc 
+
+select
+from 
+where
+
+
+
+join - 
+inner join/ natural join - removes the common attribute and displays the result from two tables - lossy operation
+left join - no data from the left table is lost  
+right join
+full join 
+ 
+
+ Aggregate funcitons
+AVG
+min
+max 
+sum 
+above all does not work on null - ignores them
+count  - this can count null 
+
+
+
+displaying 
+order by
+
+
+TRANSACTIONS
+transactions
+ACID
+atomicity
+consistency
+isolation
+durability
+
+serialization, concurrency
